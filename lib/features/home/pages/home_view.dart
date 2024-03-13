@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:piggy_vest_clone/investment_view.dart';
+import 'package:piggy_vest_clone/features/investment/pages/investment_view.dart';
+
+import '../../account/widget/suggestion_section.dart';
+import '../widget/savings_details_card.dart';
 
 class SavingsView extends StatelessWidget {
   const SavingsView({super.key});
@@ -22,7 +25,7 @@ class SavingsView extends StatelessWidget {
             ),
             Text("Do more with your finance",
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 12,
               ),
             ),
           ],
@@ -31,8 +34,8 @@ class SavingsView extends StatelessWidget {
           IconButton(
               onPressed: (){},
               icon:Icon(Icons.account_circle,
-                size: 35,
-                color: Colors.purpleAccent,
+                size: 40,
+                color: Colors.purple[400]
 
               ),
     ),
@@ -40,44 +43,36 @@ class SavingsView extends StatelessWidget {
 
       ),
       body: ListView(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(14.0),
         children: [
+          SavingDetailsCard(),
           Container(
-            padding: EdgeInsets.all(16.0),
-            child: Stack(
+            padding: EdgeInsets.symmetric(vertical: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ElevatedButton.icon(
-                    onPressed: (){},
-                    icon: Icon(Icons.add,
-                      color: Colors.purple,
-                    ),
-                  label: Text("Quick save")
+                Text("Suggestions for you",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black26,
+                  ),
                 ),
-                ElevatedButton(
-                    onPressed: (){},
-                    child: Row(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      Text("View savinga"),
-    Icon(Icons.arrow_forward),
-    ],
+                suggestionsSection(),
 
-    ),
-                ),
+
+
+
               ],
             ),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(14.5),
-            ),
-
           ),
+
+
         ],
       ),
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
         child: Icon(Icons.message,
-          color: Colors.purpleAccent,
+          color: Colors.purple[400],
           opticalSize: 15.0,
 
 
@@ -95,3 +90,5 @@ class SavingsView extends StatelessWidget {
 
 }
 }
+
+

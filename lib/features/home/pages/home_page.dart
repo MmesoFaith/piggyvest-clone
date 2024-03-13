@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:piggy_vest_clone/account_view.dart';
-import 'package:piggy_vest_clone/home_view.dart';
-import 'package:piggy_vest_clone/investment_view.dart';
+import 'package:piggy_vest_clone/features/account/pages/account_view.dart';
+import 'package:piggy_vest_clone/features/home/pages/home_view.dart';
+import 'package:piggy_vest_clone/features/investment/pages/investment_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage ({super.key});
@@ -13,7 +13,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var listOfPages = [
-    HomePage(),
     SavingsView(),
     InvestmentView(),
     AccountView(),
@@ -23,13 +22,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("welcome Mmeso"),
+      body: listOfPages[selectedIndex],
 
         bottomNavigationBar:BottomNavigationBar(
         unselectedItemColor:Colors.black87 ,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        selectedItemColor: Colors.purpleAccent,
+        selectedItemColor: Colors.purple[400],
         currentIndex: selectedIndex,
         onTap: (value){
           setState(() {

@@ -23,7 +23,7 @@ class AccountView extends StatelessWidget {
           IconButton(
               onPressed: (){},
               icon: Icon(Icons.account_circle,
-              size: 40,
+              size: 10,
               ),
           )
         ],

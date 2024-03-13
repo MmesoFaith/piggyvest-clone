@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:piggy_vest_clone/home_page.dart';
+import 'package:piggy_vest_clone/features/home/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
