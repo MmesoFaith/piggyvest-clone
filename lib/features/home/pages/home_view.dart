@@ -1,11 +1,14 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:piggy_vest_clone/features/home/widget/vetted_opportunities_section.dart';
 
 import 'package:piggy_vest_clone/features/investment/pages/investment_view.dart';
 
 import '../../account/widget/suggestion_section.dart';
+import '../widget/my_to_section.dart';
 import '../widget/savings_details_card.dart';
+import '../widget/top_saving_details.dart';
 
 class SavingsView extends StatelessWidget {
   const SavingsView({super.key});
@@ -40,12 +43,13 @@ class SavingsView extends StatelessWidget {
               ),
     ),
     ],
-
       ),
       body: ListView(
         padding: EdgeInsets.all(14.0),
         children: [
           SavingDetailsCard(),
+          MyToSection(),
+          TopSavingDetails(),
           Container(
             padding: EdgeInsets.symmetric(vertical: 16),
             child: Column(
@@ -57,7 +61,9 @@ class SavingsView extends StatelessWidget {
                     color: Colors.black26,
                   ),
                 ),
+
                 suggestionsSection(),
+                VettedOpportunitiesSection(),
 
 
 
@@ -66,9 +72,9 @@ class SavingsView extends StatelessWidget {
             ),
           ),
 
-
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
         child: Icon(Icons.message,

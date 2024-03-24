@@ -5,6 +5,15 @@ class savingsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("savings view");
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My Savings"),
+        actions: [
+          IconButton(
+              onPressed: (){}, icon: Icon(Icons.info_outline_rounded))
+        ],
+      ),
+
+    );
   }
 }

@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label:"home" ),
-          BottomNavigationBarItem(icon: Icon(Icons.savings), label:"investment"),
+          BottomNavigationBarItem(icon: Icon(Icons.rocket_launch), label:"investment"),
           BottomNavigationBarItem(icon: Icon(Icons.rocket_launch), label: "savings"),
           BottomNavigationBarItem(icon:Icon(Icons.account_circle), label:"account"),
           

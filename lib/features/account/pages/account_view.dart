@@ -32,7 +32,6 @@ class AccountView extends StatelessWidget {
         children: [
           Container(
             color: Colors.white,
-            height: 30,
             child: Column(
               children: [
                 ListTile(
